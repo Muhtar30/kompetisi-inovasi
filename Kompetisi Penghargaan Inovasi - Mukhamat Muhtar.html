@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MUKHAMAT MUHTAR 801524 – Penghargaan Inovasi</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#03231A;--g2:#0A4A33;--g:#00A859;--gold:#D4AF37;--gold2:#F4DE8E;--t:#F2FBF6;--m:#A9C9B9;--bd:rgba(212,175,55,.28);--cd:rgba(255,255,255,.06)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Plus Jakarta Sans','Noto Sans SC',sans-serif;background:radial-gradient(1100px 600px at 90% -10%,rgba(0,168,89,.3),transparent),radial-gradient(900px 500px at -10% 110%,rgba(212,175,55,.14),transparent),var(--bg);color:var(--t);height:100dvh;overflow:hidden}
+#wm{position:fixed;inset:-60%;z-index:200;pointer-events:none;transform:rotate(-30deg)}
+#bar{position:fixed;top:0;left:0;height:3px;z-index:90;background:linear-gradient(90deg,var(--g),var(--gold));transition:width .5s}
+.top,.bot{position:fixed;left:0;right:0;z-index:80;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 3vw;background:rgba(3,35,26,.78);backdrop-filter:blur(14px)}
+.top{top:0;border-bottom:1px solid var(--bd)}.bot{bottom:0;border-top:1px solid var(--bd)}
+.logo{height:34px;background:#fff;border-radius:10px;padding:3px 9px;display:block}
+nav{display:flex;gap:3px;flex-wrap:wrap;justify-content:center}
+nav button,.ctl button,.lang>button{font:600 12px inherit;font-family:inherit;background:none;border:1px solid transparent;color:var(--m);padding:7px 11px;border-radius:999px;cursor:pointer;transition:.25s}
+nav button:hover{color:#fff;border-color:var(--bd)}nav button.on{background:linear-gradient(135deg,var(--g),#06784A);color:#fff}
+.ctl{display:flex;gap:8px}.ctl button,.lang>button{border-color:var(--bd);color:#fff}.ctl button:hover,.lang>button:hover{background:rgba(212,175,55,.15)}
+.lang{position:relative}.lang ul{position:absolute;right:0;top:110%;list-style:none;background:#06382A;border:1px solid var(--bd);border-radius:12px;overflow:hidden;display:none;min-width:150px}.lang.o ul{display:block}.lang li{padding:10px 14px;cursor:pointer;font-size:13px}.lang li:hover{background:rgba(0,168,89,.3)}
+.slide{position:absolute;inset:0;overflow-y:auto;padding:84px 5vw 84px;opacity:0;visibility:hidden;transform:translateY(26px) scale(.99);transition:opacity .6s,transform .6s,visibility .6s}
+.slide.a{opacity:1;visibility:visible;transform:none}
+.w{max-width:1240px;margin:0 auto}
+h1{font-size:clamp(30px,5.4vw,66px);font-weight:900;letter-spacing:-1px;line-height:1.08}
+h2{font-size:clamp(24px,3.4vw,42px);font-weight:800;letter-spacing:-.5px;margin:6px 0 10px}
+h3{font-size:15px;font-weight:700;margin-bottom:8px}
+.gold{background:linear-gradient(90deg,var(--gold2),var(--gold) 50%,#B8902A);-webkit-background-clip:text;background-clip:text;color:transparent}
+.gr{background:linear-gradient(90deg,#fff,#7BE7B0 60%,var(--gold2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tag{font-size:11px;font-weight:700;letter-spacing:2px;color:var(--gold);text-transform:uppercase}
+p{color:var(--m);line-height:1.7;font-size:15px}
+.card{background:var(--cd);border:1px solid var(--bd);border-radius:20px;padding:20px;backdrop-filter:blur(10px);transition:.3s}
+.hv:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:0 20px 50px -20px rgba(0,168,89,.7)}
+.g{display:grid;gap:16px}.g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr))}.g4{grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr))}
+.mt{margin-top:24px}
+.hero{display:grid;grid-template-columns:1.25fr 1fr;gap:30px;align-items:center;min-height:calc(100dvh - 170px)}
+.ph{width:min(100%,330px);aspect-ratio:3/4;border-radius:28px;border:2px solid var(--gold);overflow:hidden;box-shadow:0 0 70px rgba(0,168,89,.45);margin:0 auto;background:#0A4A33}
+.ph img{width:100%;height:100%;object-fit:cover;object-position:top}
+.id{display:inline-block;margin-top:14px;padding:8px 18px;border-radius:999px;border:1px solid var(--gold);background:rgba(212,175,55,.12);font-weight:800;letter-spacing:1px}
+.pill{display:inline-flex;align-items:center;gap:12px;margin-bottom:14px}.pill .logo{height:44px}
+.pc{cursor:pointer;position:relative;overflow:hidden}.pc .n{font-size:34px;font-weight:900}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.chip{font-size:12px;font-weight:600;padding:7px 12px;border-radius:999px;background:rgba(0,168,89,.16);border:1px solid rgba(0,168,89,.4);color:#D6F5E4}
+.view{position:relative;border-radius:16px;border:1px solid var(--bd);background:#06261D;overflow:hidden;aspect-ratio:16/9;cursor:zoom-in;display:flex;align-items:center;justify-content:center}
+.view img{width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .4s}.view.ok img{opacity:1}
+.view.ld::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.1) 50%,transparent 70%);background-size:200% 100%;animation:sh 1.2s infinite}
+@keyframes sh{to{background-position:-200% 0}}
+.fb{position:absolute;inset:14px;border:2px dashed var(--bd);border-radius:12px;display:none;align-items:center;justify-content:center;text-align:center;padding:14px;color:var(--m);font-size:13px}.view.er .fb{display:flex}
+.th{display:flex;gap:8px;overflow-x:auto;margin-top:10px;padding-bottom:6px}.th button{flex:0 0 108px;height:64px;border-radius:10px;border:2px solid transparent;background:#06261D;padding:0;cursor:pointer;overflow:hidden;opacity:.6}.th button.on{border-color:var(--gold);opacity:1}.th img{width:100%;height:100%;object-fit:contain}
+.cap{margin-top:10px}.cap b{color:var(--gold2)}
+.benefit{margin-top:18px;padding:18px 22px;border-radius:18px;background:linear-gradient(135deg,rgba(0,168,89,.28),rgba(212,175,55,.1));border:1px solid var(--bd);font-weight:500;line-height:1.7}
+.paper{background:#fff;color:#0A3D2B;border-radius:18px;padding:16px;overflow-x:auto;box-shadow:0 20px 50px -25px #000}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:9px 8px;border-bottom:1px solid #DDEBE3;text-align:center}th:first-child,td:first-child{text-align:left;font-weight:600}th{background:#0A4A33;color:#fff}th.h,td.h{background:#E6F7EE;box-shadow:inset 0 0 0 1px var(--g)}th.h{background:var(--g)}.y{color:#00A859;font-weight:800}.x{color:#9AB0A5}.k{color:#B8860B;font-weight:700;font-size:12px}
+.rc{cursor:pointer;text-align:center}.rc.on{border-color:var(--gold);background:linear-gradient(135deg,rgba(0,168,89,.4),rgba(212,175,55,.15))}.rc .z{color:var(--gold2);font-size:13px;margin-bottom:6px}.rc p{font-size:12.5px}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.st{flex:1;min-width:120px;text-align:center;padding:13px 8px;border-radius:14px;border:1px solid var(--bd);background:var(--cd);cursor:pointer;font-weight:700;font-size:12.5px;transition:.3s}.st.on,.st:hover{background:linear-gradient(135deg,var(--g),#06784A);border-color:var(--gold);transform:scale(1.04)}.ar{color:var(--gold);font-weight:800}
+.eq{margin-top:26px;text-align:center;padding:20px;border-radius:24px;border:1px solid var(--gold);background:radial-gradient(circle,rgba(0,168,89,.35),transparent 70%);font-weight:800;font-size:clamp(15px,2vw,22px);animation:gl 3s infinite}@keyframes gl{50%{box-shadow:0 0 50px rgba(212,175,55,.45)}}
+#lb{position:fixed;inset:0;z-index:150;background:rgba(2,20,14,.94);display:none;align-items:center;justify-content:center;flex-direction:column;gap:10px;padding:20px;cursor:zoom-out}#lb.o{display:flex}#lb img{max-width:96vw;max-height:80vh;object-fit:contain;border-radius:10px}#lb span{color:var(--gold2);font-weight:700}
+.lang li.hd{font-size:11px;color:var(--gold2);cursor:default;letter-spacing:1px;border-bottom:1px solid var(--bd)}.lang li.hd:hover{background:none}
+.lang>button{white-space:nowrap;font-size:11.5px}
+.sc{text-align:center}.sc .mm{color:var(--m);font-weight:600;margin-top:8px}.sc .aa{font-size:clamp(18px,2.2vw,26px);font-weight:900;margin-top:4px}.sc .ar{display:block;margin:4px 0}
+.mb{border:1px solid var(--bd);background:none;color:var(--m);padding:8px 16px;border-radius:999px;font:700 12px inherit;font-family:inherit;cursor:pointer}.mb.on{background:linear-gradient(135deg,var(--g),#06784A);color:#fff;border-color:var(--gold)}
+.go{background:linear-gradient(135deg,var(--gold),#B8902A);color:#1A1400;border:0;padding:9px 20px;border-radius:999px;font:800 13px inherit;font-family:inherit;cursor:pointer}
+.clk{font-size:clamp(38px,6vw,64px);font-weight:900;font-variant-numeric:tabular-nums;color:var(--gold2);text-align:center;margin:8px 0}
+.lane{height:16px;background:rgba(255,255,255,.1);border-radius:99px;overflow:hidden;margin:4px 0 14px}.lane i{display:block;height:100%;width:0;border-radius:99px}.lane.m i{background:#8FB3A2}.lane.a i{background:linear-gradient(90deg,var(--g),var(--gold))}
+.res{min-height:44px;text-align:center;font-weight:600;color:#D6F5E4;margin-top:6px}
+.ci{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--gold);background:rgba(0,0,0,.25);color:#fff;font:700 20px inherit;font-family:inherit;margin:6px 0 14px}
+.ov{font-size:clamp(20px,2.6vw,30px);font-weight:900}
+#ts{position:fixed;left:50%;bottom:92px;transform:translate(-50%,24px);z-index:120;min-width:min(92vw,420px);padding:14px 18px;border-radius:16px;background:rgba(3,35,26,.95);border:1px solid var(--gold);box-shadow:0 20px 50px -10px rgba(0,0,0,.6),0 0 40px rgba(0,168,89,.35);opacity:0;pointer-events:none;transition:.35s;font-size:13px;font-weight:600}
+#ts.s{opacity:1;transform:translate(-50%,0)}#ts .tb{height:4px;border-radius:9px;background:rgba(255,255,255,.12);margin-top:10px;overflow:hidden}#ts .tb i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--g),var(--gold))}#ts.d{border-color:var(--g)}
+.ph{position:relative;transition:transform .25s ease-out,box-shadow .4s,border-color .4s;transform-style:preserve-3d;will-change:transform;animation:pg 4s ease-in-out infinite}
+@keyframes pg{50%{box-shadow:0 0 90px rgba(0,168,89,.6),0 0 28px rgba(212,175,55,.45)}}
+.ph img{transition:transform .8s cubic-bezier(.2,.8,.2,1),filter .6s}
+.ph::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.3),transparent 45%)}
+.ph::after{content:"";position:absolute;inset:-20%;z-index:3;pointer-events:none;background:linear-gradient(115deg,transparent 40%,rgba(255,236,170,.55) 50%,transparent 60%);transform:translateX(-130%)}
+.ph:hover{animation:none;border-color:var(--gold2);box-shadow:0 0 0 3px rgba(212,175,55,.5),0 35px 90px -10px rgba(212,175,55,.5),0 0 130px rgba(0,168,89,.65)}
+.ph:hover img{transform:scale(1.08);filter:saturate(1.12) contrast(1.04)}.ph:hover::before{opacity:1}.ph:hover::after{transform:translateX(130%);transition:transform 1s ease}
+@media(max-width:820px){nav{display:none}.hero{grid-template-columns:1fr;text-align:center}.slide{padding:76px 4vw 80px}}
+
+/* ===== SINEMA: intro, tombol play, mode tayang ===== */
+@keyframes fadeInDown{from{opacity:0;transform:translateY(-34px)}to{opacity:1;transform:none}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:none}}
+@keyframes zoomInFade{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+@keyframes pulseGlow{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:1;transform:scale(1.14)}}
+@keyframes dustUp{0%{transform:translate(0,0);opacity:0}15%{opacity:.9}100%{transform:translate(var(--dx,20px),-108vh);opacity:0}}
+@keyframes goldShine{to{background-position:200% center}}
+@keyframes blinkC{50%{opacity:0}}@keyframes typeIn{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes btnPulse{0%{box-shadow:0 0 0 0 rgba(212,175,55,.7),0 12px 34px -8px rgba(212,175,55,.75)}70%,100%{box-shadow:0 0 0 24px rgba(212,175,55,0),0 12px 34px -8px rgba(212,175,55,.75)}}
+#intro{position:fixed;inset:0;z-index:9999;background:#000;display:none;flex-direction:column;align-items:center;justify-content:center;gap:clamp(10px,2.4vh,24px);padding:20px;overflow:hidden;text-align:center}
+#intro.on,#intro.pre{display:flex}#intro{box-shadow:inset 0 0 240px 70px #000}#intro.out{animation:ioOut .7s forwards}@keyframes ioOut{to{opacity:0;visibility:hidden}}
+#intro::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 46%,rgba(212,175,55,.3),rgba(0,168,89,.08) 40%,transparent 62%);animation:pulseGlow 3.4s ease-in-out infinite}
+.dust{position:absolute;inset:0;pointer-events:none}.dust i{position:absolute;bottom:-12px;border-radius:50%;background:radial-gradient(circle,#F4DE8E,rgba(212,175,55,0) 70%);opacity:0;animation:dustUp linear infinite}
+#intro>*:not(.dust){position:relative;z-index:2;opacity:0}
+.io-logo{height:clamp(54px,9vh,92px);width:auto;display:block;position:relative;z-index:2;mix-blend-mode:screen;opacity:0}
+#intro>.io-logobox{position:relative;z-index:auto;opacity:1;display:inline-block}
+.io-halo{position:absolute;inset:-70% -40%;z-index:1;opacity:0;pointer-events:none;background:radial-gradient(ellipse at center,rgba(244,222,142,.55),rgba(212,175,55,.2) 40%,transparent 68%);filter:blur(8px)}
+@keyframes haloIn{to{opacity:1}}
+#intro.on .io-halo{animation:haloIn 1.6s .3s both,pulseGlow 3.4s 2s ease-in-out infinite}
+.io-frame{cursor:zoom-in}
+.io-cta{display:flex;flex-direction:column;align-items:center;gap:12px}.io-hint{font-size:12px;letter-spacing:.08em;color:rgba(244,222,142,.85)}
+.io-lang #sndi{padding:7px 11px}
+.io-photo{width:clamp(84px,14vh,130px);aspect-ratio:1;border-radius:50%;overflow:hidden;border:2px solid var(--gold);box-shadow:0 0 44px rgba(212,175,55,.55)}.io-photo img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.ou-tag{max-width:min(86vw,760px);color:#E8D9A8;font-size:clamp(14px,1.8vw,20px);font-style:italic;line-height:1.6}
+.ou-foot{color:rgba(212,175,55,.8);font-weight:700;letter-spacing:.3em;font-size:12px}
+.io-title{font-size:clamp(40px,8vw,80px);font-weight:900;letter-spacing:2px;line-height:1.05;background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold),var(--gold2));background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent}
+.io-sub{color:#fff;font-weight:600;font-size:clamp(12px,1.8vw,20px);letter-spacing:.6em;padding-left:.6em}
+.io-frame{overflow:hidden;border:1px solid rgba(212,175,55,.85);border-radius:14px;background:#050505;box-shadow:0 0 44px rgba(212,175,55,.38),0 0 130px rgba(212,175,55,.2),0 28px 64px rgba(0,0,0,.8)}
+.io-frame img{display:block;max-width:min(88vw,980px);max-height:44vh;object-fit:contain}
+.io-line{height:1px;width:0;background:linear-gradient(90deg,transparent,var(--gold2),transparent)}
+.io-cta .playbtn{font-size:clamp(15px,1.6vw,19px);padding:18px 46px;margin:0}
+#intro>.io-lang{position:absolute;top:18px;right:18px;display:flex;gap:6px}.io-lang button{background:rgba(0,0,0,.5);border:1px solid rgba(212,175,55,.5);color:var(--gold2);font:700 12px inherit;font-family:inherit;padding:7px 13px;border-radius:999px;cursor:pointer}.io-lang button:hover{background:rgba(212,175,55,.2)}
+#intro::after{content:"";position:absolute;inset:-60%;pointer-events:none;background:conic-gradient(from 0deg at 50% 46%,transparent 0 20deg,rgba(212,175,55,.08) 32deg,transparent 48deg 112deg,rgba(212,175,55,.06) 126deg,transparent 142deg 222deg,rgba(212,175,55,.08) 236deg,transparent 252deg);animation:spinRays 46s linear infinite}
+@keyframes spinRays{to{transform:rotate(360deg)}}@keyframes growIn{0%{opacity:0;transform:scale(.58)}14%{opacity:1}100%{opacity:1;transform:scale(1)}}@keyframes kenOut{from{transform:scale(1.65)}to{transform:scale(1)}}@keyframes lineGrow{from{width:0;opacity:0}to{width:min(62vw,560px);opacity:1}}@keyframes fadeOutQ{to{opacity:0}}
+@keyframes titleIn{from{opacity:0;letter-spacing:.36em;filter:blur(12px);transform:translateY(22px)}to{opacity:1;letter-spacing:2px;filter:blur(0);transform:none}}
+.io-load{color:rgba(212,175,55,.7);font-weight:700;font-size:12px;letter-spacing:.34em}.io-load b{display:inline-block;font-weight:700;animation:typeIn 1.9s steps(24,end) 3s both}.io-load::after{content:"▌";margin-left:3px;animation:blinkC .8s step-end infinite}
+#intro.on .io-logo{animation:fadeInDown 1s .2s both}
+#intro.on .io-title{animation:titleIn 1.7s .9s cubic-bezier(.2,.7,.2,1) both,goldShine 4s 2.6s linear infinite}
+#intro.on .io-sub{animation:fadeInUp 1s 1.5s both}
+#intro.on .io-frame{animation:growIn 5.5s cubic-bezier(.22,.7,.2,1) 2.3s both}#intro.on .io-line{animation:lineGrow 1.4s 1.7s both}#intro.on .io-cta{animation:fadeInUp 1s 7.8s both}#intro.on .io-lang{animation:fadeInUp 1s .4s both}
+#intro.on .io-load{animation:fadeInUp .8s 2.8s both,fadeOutQ .6s 7.3s forwards}
+.playbtn{margin:8px 0 4px;padding:16px 36px;border:0;border-radius:50px;font:900 16px inherit;font-family:inherit;color:#111;cursor:pointer;background:linear-gradient(135deg,#B8902A 0%,#F4DE8E 28%,#D4AF37 52%,#FFF1B8 74%,#B8902A 100%);background-size:200% 200%;animation:btnPulse 2.2s ease-out infinite,goldShine 6s linear infinite;transition:transform .3s}
+.playbtn:hover{transform:scale(1.08);animation:goldShine 6s linear infinite;box-shadow:0 0 56px rgba(244,222,142,.85),0 16px 44px -8px rgba(212,175,55,.9)}
+#dock{position:fixed;right:14px;bottom:14px;z-index:130;display:none;gap:8px;align-items:center;opacity:0;transition:opacity .4s,bottom .3s}
+body.show #dock{display:flex}body.show.mv #dock,body.show.man #dock,body.paused #dock{opacity:1}
+#dock button{padding:9px 14px;border-radius:999px;border:1px solid var(--gold);background:rgba(3,35,26,.92);color:#fff;font:700 12px inherit;font-family:inherit;cursor:pointer;backdrop-filter:blur(8px);transition:.25s}
+#dock button:hover{background:rgba(212,175,55,.22)}
+#dock #manb.res{background:linear-gradient(135deg,var(--gold),#B8902A);color:#1A1400;animation:btnPulse 2.2s ease-out infinite}
+body.show{cursor:none}body.show.mv,body.show.man{cursor:auto}body.show .bot{opacity:0;pointer-events:none}
+body.show.man .bot{opacity:1;pointer-events:auto}body.show.man #dock{bottom:64px}
+
+/* ===== COVER BELAKANG ===== */
+#outro{position:fixed;inset:0;z-index:9999;background:#000;display:none;flex-direction:column;align-items:center;justify-content:center;gap:clamp(10px,2.4vh,24px);padding:20px;overflow:hidden;text-align:center}
+#outro.on,#outro.pre{display:flex}
+#outro{box-shadow:inset 0 0 240px 70px #000}
+#outro.out{animation:ioOut .7s forwards}
+#outro::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 46%,rgba(212,175,55,.3),rgba(0,168,89,.08) 40%,transparent 62%);animation:pulseGlow 3.4s ease-in-out infinite}
+#outro>*:not(.dust){position:relative;z-index:2;opacity:0}
+#outro>.io-logobox{position:relative;z-index:auto;opacity:1;display:inline-block}
+#outro.on .io-halo{animation:haloIn 1.6s .3s both,pulseGlow 3.4s 2s ease-in-out infinite}
+#outro>.io-lang{position:absolute;top:18px;right:18px;display:flex;gap:6px}
+#outro::after{content:"";position:absolute;inset:-60%;pointer-events:none;background:conic-gradient(from 0deg at 50% 46%,transparent 0 20deg,rgba(212,175,55,.08) 32deg,transparent 48deg 112deg,rgba(212,175,55,.06) 126deg,transparent 142deg 222deg,rgba(212,175,55,.08) 236deg,transparent 252deg);animation:spinRays 46s linear infinite}
+#outro.on .io-logo{animation:fadeInDown 1s .2s both}
+#outro.on .io-title{animation:titleIn 1.7s .9s cubic-bezier(.2,.7,.2,1) both,goldShine 4s 2.6s linear infinite}
+#outro.on .io-sub{animation:fadeInUp 1s 1.5s both}
+#outro.on .io-frame{animation:growIn 5.5s cubic-bezier(.22,.7,.2,1) 2.3s both}
+#outro.on .io-line{animation:lineGrow 1.4s 1.7s both}
+#outro.on .io-cta{animation:fadeInUp 1s 7.8s both}
+#outro.on .io-lang{animation:fadeInUp 1s .4s both}
+#outro.on .io-load{animation:fadeInUp .8s 2.8s both,fadeOutQ .6s 7.3s forwards}
+#outro.on .io-photo{animation:zoomInFade 1.1s .7s both}
+#outro.on .io-title{animation:titleIn 1.7s 1.1s cubic-bezier(.2,.7,.2,1) both,goldShine 4s 2.8s linear infinite}
+#outro.on .io-line{animation:lineGrow 1.4s 1.9s both}
+#outro.on .io-sub{animation:fadeInUp 1s 2.3s both}
+#outro.on .ou-tag{animation:fadeInUp 1s 3.1s both}
+#outro.on .ou-foot{animation:fadeInUp 1s 3.9s both}
+#outro.on .io-cta{animation:fadeInUp 1s 5s both}
+/* ===== PENGGUNA ZOOM GAMBAR ===== */
+#zv{position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.95);display:none;flex-direction:column}#zv.on{display:flex}
+.zv-bar{display:flex;gap:8px;justify-content:center;padding:12px}.zv-bar button{width:46px;height:42px;border-radius:12px;border:1px solid rgba(212,175,55,.6);background:rgba(212,175,55,.1);color:var(--gold2);font:800 18px inherit;font-family:inherit;cursor:pointer}.zv-bar button:hover{background:rgba(212,175,55,.3)}
+.zv-st{flex:1;position:relative;overflow:hidden;cursor:grab;touch-action:none}.zv-st:active{cursor:grabbing}
+#zvi{position:absolute;left:0;top:0;transform-origin:0 0;max-width:none;user-select:none;-webkit-user-drag:none}
+.zv-h{text-align:center;color:var(--m);font-size:12px;padding:9px}
+.io-dummy{}
+
+#pz{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);z-index:10001;padding:10px 22px;border-radius:999px;background:rgba(3,35,26,.94);border:1px solid var(--gold);color:var(--gold2);font-weight:700;font-size:13px;opacity:0;pointer-events:none;transition:opacity .3s}body.paused #pz{opacity:1}
+body.paused #outro,body.paused #outro *,body.paused .dust i{animation-play-state:paused!important}
+#intro.fast>*:not(.dust),#intro.fast .io-logo,#intro.fast .io-halo{animation:none!important;opacity:1!important}
+#intro.fast .io-frame{transform:none!important}#intro.fast .io-line{width:min(62vw,560px)}#intro.fast .io-load{display:none}
+
+@media(prefers-reduced-motion:reduce){.dust i{display:none}}
+/* ===== v3: galeri menempel (sticky), Ken Burns, lower-third, toast manual ===== */
+@media(min-width:1000px){.slide .g2>.gal{position:sticky;top:calc(var(--tb,56px) + 12px);align-self:start}.slide .g2>.gal .view{max-height:calc(100dvh - var(--tb,56px) - 310px)}.slide .g2>.gal .cap p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:14px;line-height:1.5}.slide .g2>.gal .th button{flex-basis:92px;height:54px}}
+.gal .th{scrollbar-width:none}.gal .th::-webkit-scrollbar{display:none}
+@keyframes vIn{from{opacity:0;transform:scale(.985);filter:blur(3px)}to{opacity:1;transform:none;filter:none}}
+body.show:not(.man) .view.ok img{animation:vIn .7s ease-out both}
+.slide{padding-top:calc(var(--tb,56px) + 28px)!important}
+#gate{position:fixed;inset:0;z-index:10001;background:#000;display:none;flex-direction:column;align-items:center;justify-content:center;gap:24px;cursor:pointer}#gate.on{display:flex}
+#gate .gring{width:92px;height:92px;border-radius:50%;border:1.5px solid rgba(212,175,55,.7);display:flex;align-items:center;justify-content:center;box-shadow:0 0 50px rgba(212,175,55,.35);animation:gatePulse 2.4s ease-in-out infinite}
+#gate .gring::before{content:"";margin-left:7px;border-style:solid;border-width:15px 0 15px 25px;border-color:transparent transparent transparent #F4DE8E}
+#gate .gt{color:rgba(244,222,142,.85);font-weight:700;letter-spacing:.38em;font-size:12px;padding-left:.38em}
+@keyframes gatePulse{50%{transform:scale(1.08);box-shadow:0 0 80px rgba(212,175,55,.55)}}
+body.show:not(.man) .gal .view{box-shadow:0 0 70px rgba(0,168,89,.28),0 0 0 1px rgba(212,175,55,.45)}
+.view{cursor:zoom-in}
+body.show:not(.man) .slide.a .w>*:not(.ph){animation:fadeInUp .9s cubic-bezier(.2,.7,.2,1) backwards}
+body.show:not(.man) .slide.a .w>*:nth-child(2){animation-delay:.12s}body.show:not(.man) .slide.a .w>*:nth-child(3){animation-delay:.24s}body.show:not(.man) .slide.a .w>*:nth-child(4){animation-delay:.36s}
+#lt{position:fixed;left:3vw;bottom:34px;z-index:95;pointer-events:none;padding:14px 34px 14px 18px;border-left:4px solid var(--gold);background:linear-gradient(90deg,rgba(3,35,26,.94),rgba(3,35,26,.7) 70%,rgba(3,35,26,0));opacity:0}
+#lt.s{animation:ltIn 4.4s ease both}body.man #lt{display:none}
+@keyframes ltIn{0%{opacity:0;transform:translateX(-34px)}12%,80%{opacity:1;transform:none}100%{opacity:0;transform:translateX(24px)}}
+.lt-n{font:800 12px inherit;font-family:inherit;letter-spacing:3px;color:var(--gold)}.lt-t{font-size:clamp(18px,2.4vw,30px);font-weight:900;margin-top:2px}.lt-s{font-size:13px;color:var(--m);margin-top:2px}
+#mtoast{position:fixed;left:50%;top:74px;transform:translate(-50%,-14px);z-index:10002;padding:11px 22px;border-radius:999px;background:rgba(3,35,26,.96);border:1px solid var(--gold);color:var(--gold2);font-weight:700;font-size:13px;opacity:0;pointer-events:none;transition:.35s;max-width:92vw;text-align:center}
+#mtoast.s{opacity:1;transform:translate(-50%,0)}
+</style></head><body>
+<div id="gate"><div class="gring"></div><div class="gt" data-i="gate"></div></div>
+<div id="intro" class="pre"><div class="dust" id="dust"></div>
+<div class="io-logobox"><span class="io-halo"></span><img class="io-logo" data-src="https://drive.google.com/thumbnail?id=1E2b4dl8iau-nCBgr_l2sANwzN0MavtAA&sz=w500" alt="J&T Cargo" onerror="this.style.display='none'"></div>
+<div class="io-title" data-i="io1"></div><div class="io-line"></div><div class="io-sub" data-i="io2"></div>
+<div class="io-frame" onclick="zvOpen()"><img data-src="https://drive.google.com/thumbnail?id=1JYulbzyeqM5d86aJSzRVPra5TJnUTqaE&sz=w1600" alt="" onerror="this.style.display='none'"></div>
+<div class="io-load"><b data-i="io3"></b></div>
+<div class="io-cta"><div class="io-hint" data-i="zh1"></div><button class="playbtn" onclick="beginFromIntro()" data-i="play"></button></div>
+<div class="io-lang"><button id="sndi" onclick="toggleSound()">🔊</button><button onclick="setLang('id')">🇮🇩 Indonesia</button><button onclick="setLang('zh')">🇨🇳 中文</button></div></div>
+<div id="outro"><div class="dust" id="dust2"></div>
+<div class="io-logobox"><span class="io-halo"></span><img class="io-logo" data-src="https://drive.google.com/thumbnail?id=1E2b4dl8iau-nCBgr_l2sANwzN0MavtAA&sz=w500" alt="J&T Cargo" onerror="this.style.display='none'"></div>
+<div class="io-photo"><img data-src="https://drive.google.com/thumbnail?id=1w7NKnr3gVB1W9v-lE4tdKONGDb7CVMpl&sz=w600" alt=""></div>
+<div class="io-title" data-i="ou1"></div><div class="io-line"></div><div class="io-sub" data-i="ou2"></div>
+<div class="ou-tag" data-i="cl3"></div><div class="ou-foot" data-i="ou4"></div>
+<div class="io-cta"><button class="playbtn" onclick="replayShow()" data-i="ou3"></button></div></div>
+<div id="zv"><div class="zv-bar"><button onclick="zvZoom(1.4)">＋</button><button onclick="zvZoom(1/1.4)">－</button><button onclick="zvFit()">⟲</button><button onclick="zvClose()">✕</button></div><div class="zv-st"><img id="zvi" alt=""></div><div class="zv-h" data-i="zvh"></div></div>
+<div id="dock"><button id="sndb" onclick="toggleSound()">🔊</button><button id="pausb" onclick="togglePause()">⏸</button><button id="manb" onclick="toggleManual()"></button><button id="stopb" onclick="stopShow()" data-i="stopb"></button></div><div id="pz" data-i="pz"></div><div id="mtoast"></div><div id="lt"><div class="lt-n"></div><div class="lt-t"></div><div class="lt-s"></div></div>
+<div id="bar"></div><div id="wm"></div>
+<div class="top"><img class="logo" data-img="1hwZKQLZVMHK7d36QzsjF_UFUApUc5pwj" alt="J&T Cargo"><nav id="nav"></nav>
+<div class="lang" id="lang"><button onclick="this.parentNode.classList.toggle('o')" id="lb0">🇮🇩 Indonesia ▼</button><ul><li class="hd" data-i="langpick"></li><li onclick="setLang('id')">🇮🇩 Indonesia</li><li onclick="setLang('zh')">🇨🇳 中文</li></ul></div></div>
+
+<section class="slide"><div class="w hero"><div>
+ <div class="pill"><img class="logo" data-img="1hwZKQLZVMHK7d36QzsjF_UFUApUc5pwj" alt="J&T Cargo"><span class="tag">J&T Cargo – Jakarta</span></div>
+ <div class="tag" style="font-size:13px;margin-bottom:6px" data-i="award"></div>
+ <h1 class="gold">MUKHAMAT MUHTAR</h1><div class="id" data-i="idk"></div>
+ <h2 class="gr" style="margin-top:18px" data-i="theme"></h2>
+ <p style="font-size:17px;color:#D6F5E4" data-i="tag"></p>
+ <div class="g g3 mt" id="pil"></div></div>
+ <div class="ph"><img data-img="1w7NKnr3gVB1W9v-lE4tdKONGDb7CVMpl" alt="Mukhamat Muhtar"></div></div></section>
+
+<section class="slide"><div class="w"><span class="tag" data-i="n1"></span><h2 class="gr" data-i="n1"></h2>
+ <div class="g g2" style="align-items:center"><div class="ph"><img data-img="1w7NKnr3gVB1W9v-lE4tdKONGDb7CVMpl" alt="Mukhamat Muhtar"></div>
+ <div class="card"><div class="tag" data-i="dev"></div><h2 class="gold">Mukhamat Muhtar</h2><div class="id" style="margin:0 0 14px" data-i="idk"></div><h3>J&T Cargo – Jakarta</h3><p style="font-size:16px;font-style:italic" data-i="bio"></p></div></div></div></section>
+
+<section class="slide"><div class="w"><span class="tag">01</span><h2 class="gr" data-i="a1"></h2><div class="g g2"><div><p data-i="d1"></p><div class="chips" id="c1"></div><div class="mt" data-u="0"></div></div><div class="gal" data-g="fin"></div></div><div class="benefit" data-i="b1"></div></div></section>
+<section class="slide"><div class="w"><span class="tag">02</span><h2 class="gr" data-i="a2"></h2><div class="g g2"><div><p data-i="d2"></p><div class="chips" id="c2"></div><div class="mt" data-u="1"></div><div class="exb mt" data-ex="ton"></div></div><div class="gal" data-g="ton"></div></div><div class="benefit" data-i="b2"></div></div></section>
+<section class="slide"><div class="w"><span class="tag">03</span><h2 class="gr" data-i="a3"></h2><div class="g g2"><div><p data-i="d3"></p><div class="mt" data-u="2"></div><div class="exb mt" data-ex="scm"></div><div class="g g3 mt" id="grp" style="grid-template-columns:1fr"></div></div><div class="gal" data-g="scm"></div></div>
+ <h3 class="mt" data-i="rt"></h3><div class="g g4" id="rl"></div>
+ <div class="paper mt"><table id="mx"></table><small style="color:#5C7A6B;display:block;margin-top:8px" data-i="lg"></small></div>
+ <h3 class="mt" data-i="wf"></h3><div class="flow" id="fl"></div><div class="card mt" id="fd"></div>
+ <div class="benefit" data-i="b3"></div></div></section>
+
+<section class="slide"><div class="w"><span class="tag">SCM</span><h2 class="gr" data-i="sp1"></h2>
+ <div class="g g3">
+  <div class="card hv sc"><small data-i="st1"></small><div class="mm" data-i="m1"></div><span class="ar">➜</span><div class="aa gold" data-i="sa1"></div></div>
+  <div class="card hv sc"><small data-i="st2"></small><div class="mm" data-i="m2"></div><span class="ar">➜</span><div class="aa gold" data-i="sa2"></div></div>
+  <div class="card hv sc"><small data-i="st3"></small><div class="aa gold" style="font-size:clamp(34px,5vw,54px);margin-top:14px">&gt; 99%</div></div></div>
+ <div class="card mt"><h3 data-i="rt_"></h3>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><button class="mb on" data-m="1" onclick="setMode(1)" data-i="rb1"></button><button class="mb" data-m="500" onclick="setMode(500)" data-i="rb2"></button><button class="go" onclick="race()" data-i="go_"></button></div>
+  <div class="clk" id="clk">00:00</div>
+  <small style="color:var(--m)" data-i="lm"></small><div class="lane m"><i id="lm"></i></div>
+  <small style="color:var(--m)" data-i="la"></small><div class="lane a"><i id="la"></i></div>
+  <div class="res" id="rr"></div></div>
+ <p style="margin-top:12px;font-size:12.5px" data-i="spn"></p></div></section>
+
+<section class="slide"><div class="w"><span class="tag">SCM</span><h2 class="gr" data-i="sp2"></h2>
+ <div class="g g2"><div class="card"><h3 data-i="cal"></h3><small style="color:var(--m)" data-i="cin"></small><input class="ci" id="ci" type="number" min="0" value="500" oninput="calc()">
+  <div class="g g2" style="gap:10px"><div><small style="color:var(--m)" data-i="o1l"></small><div class="ov" id="o1"></div></div><div><small style="color:var(--m)" data-i="o2l"></small><div class="ov" id="o2"></div></div><div><small style="color:var(--m)" data-i="o3l"></small><div class="ov gold" id="o3"></div></div><div><small style="color:var(--m)" data-i="o4l"></small><div class="ov gold" id="o4"></div></div></div>
+  <p style="margin-top:10px;font-size:12.5px" data-i="calnote"></p></div>
+ <div><h3 data-i="ctl"></h3><div class="g g2" style="gap:12px" id="ctc"></div></div></div>
+ <h3 class="mt" data-i="impl"></h3><div class="g g3" id="imc"></div>
+ <h3 class="mt" data-i="crit"></h3><div class="g g3" id="crc"></div></div></section>
+
+<section class="slide"><div class="w" style="text-align:center"><span class="tag" data-i="n5"></span><h2 class="gr" data-i="imp"></h2>
+ <div class="g g3 mt" id="pp" style="text-align:left"></div><div class="eq" id="eq"></div></div></section>
+
+<section class="slide"><div class="w" style="text-align:center"><div class="ph" style="width:200px;margin-bottom:18px"><img data-img="1w7NKnr3gVB1W9v-lE4tdKONGDb7CVMpl" alt="Mukhamat Muhtar"></div>
+ <h1 class="gold" style="font-size:clamp(24px,4vw,48px)" data-i="cl1"></h1>
+ <p style="max-width:760px;margin:16px auto;font-size:17px;color:#D6F5E4" data-i="cl2"></p>
+ <h3 class="gr" style="font-size:20px" data-i="cl3"></h3>
+ <div style="margin:18px 0"><img class="logo" style="margin:0 auto" data-img="1hwZKQLZVMHK7d36QzsjF_UFUApUc5pwj" alt="J&T Cargo"><div class="id">Mukhamat Muhtar · 801524</div></div>
+ <div class="chips" id="c9" style="justify-content:center"></div>
+ <button class="id" style="cursor:pointer;color:#fff;font-family:inherit" onclick="go(0)" data-i="home"></button></div></section>
+
+<div class="bot"><div class="ctl"><button onclick="go(0)" data-i="home">⌂</button><button onclick="go(cur-1)" data-i="prev"></button></div><span id="ct" style="color:var(--m);font-size:12px;font-weight:600"></span><div class="ctl"><button onclick="fs()" data-i="full"></button><button onclick="go(cur+1)" data-i="next"></button></div></div>
+<div id="ts"><div id="tsm"></div><div class="tb"><i id="tsb"></i></div></div>
+<div id="lb" onclick="this.classList.remove('o')"><img id="lbi"><span id="lbt"></span></div>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+let lang='id',cur=0,rid=0,wi=0,gi={fin:0,ton:0,scm:0};
+const U=i=>'https://drive.google.com/thumbnail?id='+i+'&sz=w2000';
+const T=k=>{const v=D[k]||k;return v.split('|')[lang=='id'?0:1]},X=s=>s.split('|')[lang=='id'?0:1];
+const D={n0:'Beranda|首页',n1:'Profil Pengembang|开发者简介',n2:'Keuangan|财务',n3:'Tonase|吨位',n4:'SCM|SCM',n5:'Dampak Inovasi|创新影响',n6:'Penutup|结语',
+award:'Jenis Perlombaan : Penghargaan Inovasi|比赛类别：创新奖项',idk:'ID Karyawan 801524|员工工号 801524',ua:'Pengguna aktif|活跃用户',lc:'Diluncurkan|上线时间',tl:'Peluncuran dan Pengguna Aktif Tiap Aplikasi|各应用上线时间与活跃用户',theme:'Inovasi Digital untuk Transformasi Bisnis|数字创新赋能业务转型',
+tag:'Membangun Solusi Digital, Menghadirkan Efisiensi, Menciptakan Inovasi.|构建数字化解决方案，提升运营效率，推动创新发展。',
+dev:'Pengembang|开发者',bio:'"Saya percaya bahwa inovasi bukan hanya tentang menciptakan teknologi baru, tetapi tentang menemukan cara yang lebih baik untuk menyelesaikan permasalahan pekerjaan. Melalui pengembangan aplikasi digital, saya berupaya mengubah proses kerja menjadi lebih terstruktur, transparan, efisien, dan berbasis data."|“我相信，创新不仅仅是创造新技术，更重要的是找到更好的方式来解决工作中的实际问题。通过开发数字化应用，我致力于让工作流程更加规范、透明、高效，并以数据为依据。”',
+a1:'Executive Financial Dashboard|高管财务分析仪表盘',a2:'Tonase & Revenue Dashboard|吨位与营收分析仪表盘',a3:'J&T Cargo SCM Management System|J&T Cargo SCM管理系统',
+s1:'Executive Financial Dashboard|财务分析仪表盘',s2:'Tonase & Revenue Dashboard|吨位与营收分析仪表盘',s3:'J&T Cargo SCM Management System|J&T Cargo SCM管理系统',
+pil:'Tiga Pilar Inovasi Digital|三大数字创新支柱',click:'Klik untuk melihat|点击查看',
+d1:'Aplikasi monitoring dan analisis keuangan yang dikembangkan untuk membantu manajemen memahami kondisi keuangan perusahaan, memantau profitabilitas, menganalisis struktur pendapatan dan pengeluaran, serta mengidentifikasi faktor yang memengaruhi perubahan kinerja keuangan.|为帮助管理层了解公司财务状况、监控盈利能力、分析收入与支出结构并识别影响财务业绩变化的因素而开发的财务监控与分析应用。',
+d2:'Aplikasi analisis bisnis yang mengintegrasikan data tonase online dan offline, kontribusi setiap platform, pendapatan, serta persebaran tonase ke seluruh wilayah, sehingga performa bisnis dapat dipahami secara menyeluruh.|整合线上与线下吨位、各平台贡献、营收以及全国各地区吨位分布的业务分析应用，帮助全面了解业务表现。',
+d3:'Sistem manajemen operasional SCM yang mengintegrasikan pengelolaan tarif, Delivery Order, monitoring transaksi, persetujuan perubahan harga, invoice otomatis, dan tindak lanjut pembayaran customer, dengan hak akses sesuai tanggung jawab pengguna.|整合价格管理、运单、交易监控、价格变更审批、自动发票和客户付款跟进的SCM运营管理系统，并按用户职责划分访问权限。',
+b1:'Memberikan visibilitas kondisi keuangan yang lebih baik, mempercepat identifikasi faktor penyebab perubahan profit, serta mendukung pengambilan keputusan berdasarkan data.|提升财务状况的可视性，加快识别利润变化的影响因素，并为数据驱动的决策提供支持。',
+b2:'Mempermudah pemantauan performa bisnis, mengidentifikasi kontribusi setiap platform, memahami distribusi tonase antarwilayah, serta mempercepat penyusunan laporan manajemen.|便于监控业务表现，识别各平台的贡献，了解各地区的吨位分布，并加快管理报告的编制。',
+b3:'Menyederhanakan proses kerja, meningkatkan akurasi data, memperkuat pengawasan transaksi, dan membagi hak akses sesuai tanggung jawab setiap pengguna.|简化工作流程，提高数据准确性，加强交易监督，并按每位用户的职责分配访问权限。',
+rt:'Pembagian Hak Akses Empat Role (klik untuk menyorot)|四类账号的访问权限（点击高亮）',wf:'Alur Kerja SCM (klik tiap tahap)|SCM工作流程（点击各阶段）',
+lg:'✓ tersedia · - tidak tersedia · Milik Sendiri = hanya data tanggung jawab pengguna · Sesuai Kewenangan = mengikuti konfigurasi akses sistem|✓ 可用 · - 不可用 · 仅限本人 = 仅限用户负责的数据 · 按授权 = 遵循系统访问配置',
+imp:'TIGA INOVASI DIGITAL, SATU TUJUAN: TRANSFORMASI BISNIS|三项数字创新，一个共同目标：推动业务转型',
+eq:'Aplikasi Keuangan + Aplikasi Tonase dan Pendapatan + Aplikasi SCM ➜ PENGUATAN PENGELOLAAN BISNIS SECARA DIGITAL|财务分析系统 + 吨位与营收分析系统 + SCM管理系统 ➜ 全面提升业务数字化管理能力',
+note:'Tiga solusi yang saling melengkapi (bukan integrasi teknis langsung).|三套相互补充的解决方案（并非技术上的直接集成）。',
+cl1:'INOVASI BUKAN SEKADAR IDE, TETAPI SOLUSI YANG MEMBERIKAN DAMPAK.|创新不仅是理念，更是能够创造价值的解决方案。',
+cl2:'Melalui tiga aplikasi digital yang dikembangkan, saya berupaya menghadirkan solusi yang mempermudah pekerjaan, meningkatkan transparansi, memperkuat pengendalian operasional, serta mendukung pengambilan keputusan yang lebih tepat.|通过开发三套数字化应用，我致力于提供更高效的工作解决方案，提升数据透明度，加强运营管控，并支持更加精准的决策。',
+cl3:'Berinovasi untuk Mempermudah. Berkarya untuk Memberikan Dampak.|以创新简化工作，以实践创造价值。',
+home:'⌂ Beranda|⌂ 首页',prev:'◀ Sebelumnya|◀ 上一页',next:'Berikutnya ▶|下一页 ▶',full:'⛶ Layar Penuh|⛶ 全屏',
+n7:'Dampak Nyata SCM|SCM实际成效',n8:'Bukti dan Kriteria|成效与评审标准',
+io1:'KOMPETISI INOVASI|创新竞赛',io2:'J&T CARGO 2026|J&T CARGO 2026',io3:'MEMUAT PORTFOLIO INOVASI...|正在加载创新作品集…',play:'▶️ Mulai Presentasi Video|▶️ 开始视频演示',stopb:'■ Hentikan|■ 停止',pz:'⏸ Jeda · tekan Spasi untuk melanjutkan|⏸ 已暂停 · 按空格继续',zvh:'Roda mouse untuk zoom · seret untuk menggeser · klik dua kali untuk memperbesar|滚轮缩放 · 拖动平移 · 双击放大',zh1:'🔍 Klik gambar untuk memperbesar dengan kursor|🔍 点击图片，用光标放大查看',
+manb1:'🖐 Mode Manual|🖐 手动模式',manb2:'▶ Lanjutkan Autoplay|▶ 继续自动播放',mtoast:'🖐 Mode manual aktif · musik tetap berjalan · klik ▶ Lanjutkan Autoplay untuk kembali|🖐 已进入手动模式 · 音乐继续播放 · 点击 ▶ 继续自动播放返回',gate:'KLIK UNTUK MEMULAI|点击开始',
+ou1:'TERIMA KASIH|感谢观看',ou2:'MUKHAMAT MUHTAR · 801524|MUKHAMAT MUHTAR · 801524',ou3:'↻ Putar Ulang|↻ 重新播放',ou4:'KOMPETISI INOVASI · J&T CARGO 2026|创新竞赛 · J&T CARGO 2026',ex_x:'⬇ Ekspor ke Excel|⬇ 导出Excel',ex_p:'⬇ Ekspor ke PowerPoint|⬇ 导出PowerPoint',ex_prep:'Menyiapkan file|正在准备文件',ex_ok:'Simulasi berhasil, file diekspor|模拟成功，文件已导出',langset:'Pengaturan Bahasa|语言设置',langpick:'PILIH BAHASA|选择语言',
+sp1:'Sebelum dan Sesudah: Efisiensi Waktu Pembuatan Invoice|使用前后对比：发票制作效率',
+st1:'Pembuatan 1 invoice|制作1张发票',m1:'Manual: ±10 menit|手工：约10分钟',sa1:'Aplikasi: ±5 detik|应用：约5秒',
+st2:'Pembuatan 500 invoice|制作500张发票',m2:'Manual: ±83 jam (≈10 hari kerja)|手工：约83小时（约10个工作日）',sa2:'Aplikasi: kurang dari 10 menit|应用：不到10分钟',
+st3:'Penurunan waktu (500 invoice)|时间缩短（500张发票）',
+rt_:'Simulasi Perbandingan Waktu|耗时对比模拟',rb1:'1 invoice|1张发票',rb2:'500 invoice|500张发票',go_:'▶ Jalankan|▶ 开始',lm:'Cara manual|手工方式',la:'Aplikasi SCM|SCM应用',
+res1:'Aplikasi selesai dalam ±5 detik, sedangkan cara manual membutuhkan ±10 menit.|应用约5秒完成，而手工需约10分钟。',
+res2:'Aplikasi selesai dalam kurang dari 10 menit; pada menit ke-10 cara manual baru menyelesaikan sekitar 1 dari 500 invoice.|应用在10分钟内完成；到第10分钟时，手工仅完成约1张（共500张）。',
+spn:'Angka aplikasi berasal dari penggunaan nyata di departemen SCM. Waktu manual 500 invoice dihitung dari 10 menit × 500 invoice. Animasi hanya ilustrasi skala waktu.|应用数据来自SCM部门的实际使用；500张发票的手工耗时按每张10分钟×500张计算。动画仅用于说明时间比例。',
+sp2:'Dampak Waktu dan Kontrol Data|时间与数据管控成效',cal:'Kalkulator Dampak Waktu (Simulasi)|时间效益计算器（模拟）',cin:'Jumlah invoice per bulan|每月发票数量',
+o1l:'Waktu cara manual|手工耗时',o2l:'Waktu dengan aplikasi (5 detik/invoice)|使用应用耗时（每张5秒）',o3l:'Jam kerja yang dihemat|节省的工时',o4l:'Setara hari kerja (8 jam)|相当于工作日（8小时）',
+calnote:'Simulasi dari angka 10 menit dan 5 detik per invoice. Isi dengan jumlah invoice yang sebenarnya.|基于每张10分钟与5秒的模拟，请填入实际发票数量。',
+ctl:'Kontrol dan Transparansi Data|数据管控与透明度',impl:'Bukti Penerapan: Peluncuran dan Pengguna Aktif|应用实绩：上线时间与活跃用户',crit:'Menjawab Kriteria Penilaian|对应评审标准',
+u_jam:'jam|小时',u_menit:'menit|分钟',u_hari:'hari kerja|个工作日',
+ad:'Akses penuh seluruh sistem|拥有系统的全部访问权限',j6:'Mengelola DO miliknya sendiri|管理本人的运单',sl:'Fokus aktivitas sales|专注销售相关业务',sf:'Operasional dengan akses terbatas|权限受限的运营操作',
+y:'✓|✓',a:'Semua|全部',o:'Milik Sendiri|仅限本人',k:'Sesuai Kewenangan|按授权',fit:'Fitur|功能'};
+const F={c1:'Monitoring laporan keuangan|财务报告监控,Analisis Profit & Loss|利润表分析,Tren profit per periode|分期利润趋势,Komposisi pendapatan|收入构成,Komposisi pengeluaran|支出构成,Perbandingan pendapatan dan biaya|收入与成本对比,Analisis keuangan otomatis|自动财务分析,Monitoring data keuangan harian|每日财务数据监控,Monitoring tonase|吨位监控,Faktor perubahan biaya dan profit|成本与利润变动因素',
+c2:'Tonase online|线上吨位,Tonase offline|线下吨位,Analisis per platform|平台分析,Performa Shopee|Shopee表现,Performa TikTok|TikTok表现,Kontribusi Tokopedia|Tokopedia贡献,Monitoring incoming|入库监控,Monitoring revenue|营收监控,Analisis bisnis otomatis|自动业务分析,Sebaran tonase wilayah|地区吨位分布,Ekspor Excel|导出Excel,Ekspor PowerPoint|导出PowerPoint'};
+const GR=[['A. Pengelolaan DO dan Tarif|A. 运单与价格管理','Input DO|运单录入,Upload DO massal|批量上传运单,Edit & update DO|编辑更新运单,Cek tarif customer & vendor|客户与供应商价格查询,Upload tarif massal|批量上传价格,Monitoring DO|运单监控'],
+['B. Persetujuan dan Pengendalian|B. 审批与管控','Pengajuan ubah berat|申请修改重量,Pengajuan ubah harga|申请修改价格,Persetujuan harga oleh Admin|管理员价格审批,Update status pengiriman|更新发货状态,Update status cetak resi|更新打印运单状态,Upload bukti pembayaran|上传付款凭证'],
+['C. Invoice dan Pembayaran|C. 发票与付款','Invoice otomatis|自动生成发票,Cetak invoice satuan & massal|单张与批量打印发票,Monitoring customer belum bayar|未付款客户监控,Monitoring POD pembayaran|付款POD监控,Tindak lanjut pembayaran|付款跟进,WhatsApp satu klik|一键WhatsApp,Email satu klik|一键邮件'],
+['D. Monitoring Kinerja Sales|D. 销售业绩监控','Data keseluruhan sales|销售整体数据,Transaksi per sales|各销售交易,Monitoring DO|运单监控,Status pembayaran customer|客户付款状态'],
+['E. Ekspor Laporan|E. 导出报告','Ekspor Excel|导出Excel,Ekspor PowerPoint|导出PowerPoint']];
+const G={fin:[['1bA0U3JrIasRVXmqiKsS4w8PNJchL9GXx','Halaman Login|登录页面','Pintu masuk sistem; fungsi: autentikasi pengguna agar data aman.|系统入口；功能：用户认证，保障数据安全。'],['1TA8lQwknnXqNNLZujpmGoQzPSO8Ir9Ki','Dashboard Utama|主仪表盘','Pusat monitoring keuangan; fungsi: ringkasan kondisi keuangan dalam satu layar.|财务监控中心；功能：一屏概览财务状况。'],['1jxAhthLWdJOZ65C4HvPLYbXmOfD9pxId','Halaman Analisis|分析页面','Analisis otomatis; fungsi: membantu menelusuri penyebab perubahan kinerja.|自动分析；功能：协助追溯业绩变化原因。'],['1y83Pp34VaU-_lWmD3icLMEH_2Tv4I-M2','Halaman Tonase|吨位页面','Menghubungkan data operasional dengan keuangan; fungsi: memantau tonase.|连接运营与财务数据；功能：监控吨位。'],['1VW_bjO04ahYuNw53qq4fRXo6VZ-ZmA_z','Halaman Daily FS|每日财务报表页面','Monitoring harian; fungsi: memantau data keuangan setiap hari.|每日监控；功能：每天跟踪财务数据。']],
+ton:[['1wC5p4b-4kUJXDxNZIcfwMaxMCgFh9l48','Halaman Login|登录页面','Pintu masuk aplikasi; fungsi: autentikasi pengguna.|应用入口；功能：用户认证。'],['1_O-ZBYRTExWk3VI_sc9WgxzYqIcF_W_-','Dashboard Semua Tonase|全部吨位仪表盘','Ringkasan tonase online dan offline; fungsi: gambaran performa menyeluruh.|线上与线下吨位概览；功能：全面了解业务表现。'],['1C4DajrxW9e_qfrbfH-QlYFx3hDIe2u0p','Analisis Shopee|Shopee分析','Performa platform Shopee; fungsi: melihat kontribusi Shopee.|Shopee平台表现；功能：查看Shopee的贡献。'],['1Eg9A1DxI1Wb6mxjkBBkWSFa8pU6ej-SZ','Analisis TikTok|TikTok分析','Performa platform TikTok; fungsi: melihat kontribusi TikTok.|TikTok平台表现；功能：查看TikTok的贡献。'],['1mPhL9ytJsZLM2RJPb6zD0XqdCgXW1MX_','Halaman Incoming|入库页面','Monitoring incoming tonase; fungsi: memantau volume masuk.|入库吨位监控；功能：跟踪进货量。'],['1UBjINjrzolyL8lHRs4QIlJY8ucZ-B1_s','Analisis Otomatis|自动分析','Insight bisnis otomatis; fungsi: mempercepat penyusunan laporan manajemen.|自动业务洞察；功能：加快管理报告编制。']],
+scm:[['1z4oztjjX6ULenrUdojn_EQEH009Lv7TX','Halaman Login SCM|SCM登录页面','Pintu masuk sistem; fungsi: autentikasi sesuai akun dan hak akses.|系统入口；功能：按账号与权限认证。'],['1q2ujw-APN9lrU0o17H8h-uWgzL0anzLR','Dashboard Operasional|运营仪表盘','Referensi tampilan operasional SCM.|SCM运营界面参考。'],['185j5O0WnX_hllxWB5WueOUvJYDpCtJn_','Tampilan Akun Admin|管理员账号界面','Akses penuh; fungsi: kontrol, persetujuan, dan monitoring seluruh transaksi.|全部权限；功能：管控、审批并监控所有交易。'],['1hvohJPijZzNycRc36WNeTNAUoYKqKEhf','Tampilan Akun 6J|6J账号界面','Pengelolaan DO milik sendiri; fungsi: input, upload, dan pengajuan perubahan.|管理本人运单；功能：录入、上传与变更申请。'],['1WF9VgDZ5bCea4GG5sS51AT1GR4WKi9MM','Tampilan Akun Sales|销售账号界面','Fokus sales; fungsi: cek tarif dan tindak lanjut pembayaran customer.|专注销售；功能：价格查询与客户付款跟进。'],['1HjK2H533vW5Do8755_SVM0COq9STtZgs','Fitur FU Pembayaran|付款跟进功能','Tindak lanjut pembayaran berdasarkan deadline.|按截止日期跟进付款。'],['1HjK2H533vW5Do8755_SVM0COq9STtZgs','WhatsApp / Email Satu Klik|一键WhatsApp/邮件','Pesan tindak lanjut dikirim satu klik.|一键发送跟进消息。'],['129sw6grk1yNACL4GoMiQwyG2TRlX-XPJ','Contoh Invoice Otomatis|自动发票示例','Invoice dibuat otomatis dari data sistem.|发票根据系统数据自动生成。']]};
+const ROLES=[['ADMIN','管理员','ad'],['6J','6J运营人员','j6'],['SALES','销售人员','sl'],['STAFF','员工','sf']];
+const MX=[['Cek Tarif|价格查询','y - y y'],['Upload Tarif Massal|批量上传价格','y - - -'],['Input DO|运单录入','y y - y'],['Upload DO Massal|批量上传运单','y y - -'],['Monitoring DO|运单监控','a o - o'],['Pengajuan Edit Berat|申请修改重量','y y - k'],['Pengajuan Edit Harga|申请修改价格','y y - k'],['Approval Edit Harga|价格变更审批','y - - -'],['Update Status DO|更新运单状态','y - - k'],['Generate/Cetak Invoice|生成/打印发票','y - - k'],['FU Pembayaran|付款跟进','y - o k'],['Monitoring Sales|销售业绩监控','a - - -'],['Export Excel/PPT|导出Excel/PPT','y - - k']];
+const FL=[['Input DO|运单录入','Pengguna menginput DO ke sistem.|用户将运单录入系统。'],['Validasi Tarif|价格验证','Sistem mencocokkan tarif yang berlaku.|系统核对适用价格。'],['Pengajuan Perubahan Harga (Jika Diperlukan)|申请价格变更（如有需要）','Perubahan harga diajukan bila diperlukan.|如有需要，提交价格变更申请。'],['Persetujuan Admin|管理员审批','Admin menyetujui perubahan harga.|管理员审批价格变更。'],['DO Diproses|运单处理','DO diproses setelah data sesuai.|数据确认后处理运单。'],['Pembuatan Invoice Otomatis|自动生成发票','Invoice dibuat otomatis dari data sistem.|系统数据自动生成发票。'],['Monitoring Pembayaran|付款监控','Status pembayaran customer dipantau.|监控客户付款状态。'],['Tindak Lanjut Customer|客户付款跟进','Customer ditindaklanjuti lewat WhatsApp/Email.|通过WhatsApp/邮件跟进客户。']];
+const PP=[['Inovasi Analisis Keuangan|财务分析创新','Transparansi laporan, monitoring profit, analisis pendapatan & biaya, dukungan keputusan.|报告透明、利润监控、收入与成本分析、支持决策。'],['Inovasi Analisis Bisnis|业务分析创新','Tonase online/offline, kontribusi platform, revenue, sebaran wilayah, laporan bisnis.|线上/线下吨位、平台贡献、营收、地区分布、业务报告。'],['Inovasi Pengendalian Operasional|运营管理创新','Digitalisasi DO, kontrol tarif, persetujuan harga, invoice otomatis, hak akses.|运单数字化、价格管控、价格审批、自动发票、访问权限。']];
+const NAMES=['n0','n1','n2','n3','n4','n7','n8','n5','n6'],N=9;let rsel=-1;function pickRole(i){rsel=rsel==i?-1:i;render()}
+const img=(el)=>{el.referrerPolicy='no-referrer';el.src=U(el.dataset.img)};
+function viewer(id,i){const g=G[id][i];return `<div class="view ld" onclick="zoom('${id}')"><img src="${U(g[0])}" referrerpolicy="no-referrer" onload="this.parentNode.className='view ok'" onerror="this.parentNode.className='view er'"><div class="fb">${X(g[1])}</div></div>`}
+function gal(el){const id=el.dataset.g,i=gi[id],g=G[id][i];
+ el.innerHTML=viewer(id,i)+`<div class="cap"><b>${X(g[1])}</b><p>${X(g[2])}</p></div><div class="th">${G[id].map((s,j)=>`<button class="${j==i?'on':''}" onclick="gi['${id}']=${j};gal(this.closest('.gal'))"><img src="${U(s[0])}" referrerpolicy="no-referrer" loading="lazy"></button>`).join('')}</div>`}
+function zoom(id){const g=G[id][gi[id]];$('#lbi').src=U(g[0]);$('#lbt').textContent=X(g[1]);$('#lb').classList.add('o')}
+const chips=(el,s)=>el.innerHTML=s.split(',').map(x=>`<span class="chip">${X(x)}</span>`).join('');
+function render(){
+ $$('[data-i]').forEach(e=>e.textContent=T(e.dataset.i));$$('[data-img]').forEach(img);
+ $('#nav').innerHTML=NAMES.map((n,i)=>`<button class="${i==cur?'on':''}" onclick="go(${i})">${T(n)}</button>`).join('');
+ $('#pil').innerHTML=['s1','s2','s3'].map((k,i)=>`<div class="card pc hv" onclick="go(${i+2})"><div class="n gold">0${i+1}</div><h3>${T(k)}</h3><small style="color:var(--m)">${T('click')}</small></div>`).join('');
+ chips($('#c1'),F.c1);chips($('#c2'),F.c2);chips($('#c9'),'Executive Financial Dashboard|财务分析仪表盘,Tonase & Revenue Dashboard|吨位与营收分析仪表盘,J&T Cargo SCM|J&T Cargo SCM管理系统');
+ $('#grp').innerHTML=GR.map(g=>`<div class="card"><h3>${X(g[0])}</h3><div class="chips" style="margin-top:4px">${g[1].split(',').map(x=>`<span class="chip">${X(x)}</span>`).join('')}</div></div>`).join('');
+ $$('.gal').forEach(gal);
+ $('#rl').innerHTML=ROLES.map((r,i)=>`<div class="card rc hv ${i==rsel?'on':''}" onclick="pickRole(${i})"><h3>${r[0]}</h3><div class="z">${r[1]}</div><p>${T(r[2])}</p></div>`).join('');
+ const V=c=>c=='y'?'<span class="y">✓</span>':c=='-'?'<span class="x">-</span>':`<span class="k">${T(c)}</span>`;
+ $('#mx').innerHTML='<tr><th>'+T('fit')+'</th>'+ROLES.map((r,i)=>`<th class="${i==rsel?'h':''}">${r[0]}</th>`).join('')+'</tr>'+MX.map(m=>'<tr><td>'+X(m[0])+'</td>'+m[1].split(' ').map((c,i)=>`<td class="${i==rsel?'h':''}">${V(c)}</td>`).join('')+'</tr>').join('');
+ $('#fl').innerHTML=FL.map((f,i)=>`<div class="st ${i==wi?'on':''}" onclick="wi=${i};render()">${i+1}. ${X(f[0])}</div>`).join('<span class="ar">➜</span>');
+ $('#fd').innerHTML=`<h3 class="gold">${wi+1}. ${X(FL[wi][0])}</h3><p>${X(FL[wi][1])}</p>`;
+ $('#pp').innerHTML=PP.map((p,i)=>`<div class="card hv"><div class="n gold" style="font-size:30px;font-weight:900">0${i+1}</div><h3>${X(p[0])}</h3><p>${X(p[1])}</p></div>`).join('');
+ $('#eq').innerHTML=T('eq').split('➜').map((x,i)=>i?'<div style="color:var(--gold2)">'+x+'</div>':'<div style="font-size:.7em;font-weight:600">'+x+' ➜</div>').join('')+'<small style="display:block;margin-top:8px;font-weight:500;color:var(--m)">'+T('note')+'</small>';
+ $('#ct').textContent=(cur+1)+' / '+N+' • '+T(NAMES[cur]);
+ $('#lb0').innerHTML='<span style="color:var(--gold2)">'+T('langset')+' :</span> '+(lang=='id'?'🇮🇩 Indonesia ▼':'🇨🇳 中文 ▼');spot();document.documentElement.lang=lang=='id'?'id':'zh-CN'}
+const APPS=[['Executive Financial Dashboard|财务分析仪表盘','Juli 2026|2026年7月','Manager Finance, Manager Back Office, GM, dan Pengembang|财务经理、后台运营经理、总经理及开发者'],
+['Tonase & Revenue Dashboard|吨位与营收分析仪表盘','Juni 2026|2026年6月','Manager Network dan Pengembang|网络经理及开发者'],
+['J&T Cargo SCM Management System|J&T Cargo SCM管理系统','September 2026|2026年9月','Manager SCM, SPV SCM, Tim Penjadwalan, Admin, Staff Back Office, Sales, Tim 6J, dan Pengembang|SCM经理、SCM主管、调度团队、管理员、后台运营员工、销售、6J团队及开发者']];
+const appCard=(i,tag)=>{const x=APPS[i];return `<div class="card hv">${tag?`<div class="tag">${X(x[1])}</div>`:''}<h3 class="gold" style="margin-top:4px">${X(x[0])}</h3><small style="color:var(--m)">${T('lc')}: <b style="color:#fff">${X(x[1])}</b></small><p style="margin-top:6px"><b style="color:var(--gold2)">${T('ua')}:</b> ${X(x[2])}</p></div>`};
+const CT=[['Persetujuan Admin|管理员审批','Perubahan harga melalui pengajuan dan persetujuan Admin.|价格变更须经申请并由管理员审批。'],['Status Terpantau|状态可追踪','Status pengajuan dapat dipantau.|申请状态可随时查看。'],['Hak Akses per Role|按角色授权','Admin, 6J, Sales, dan Staff hanya mengakses data sesuai kewenangan.|管理员、6J、销售和员工仅可访问授权范围内的数据。'],['Invoice dari Data Sistem|基于系统数据开具发票','Invoice dibuat otomatis dari data sistem sehingga konsisten.|发票由系统数据自动生成，保持一致。']];
+const CR=[['Berdampak|有成效','Mempercepat pekerjaan tim SCM dan memperkuat kontrol data.|加快SCM团队工作并加强数据管控。'],['Dapat Diimplementasikan|可落地','Sudah digunakan seluruh karyawan departemen SCM dengan pembagian hak akses.|已供SCM部门全体员工使用，并按角色划分权限。'],['Efisiensi Waktu dan Biaya|时间与成本效率','Invoice dari ±10 menit menjadi ±5 detik; jam kerja yang dihemat dapat dialihkan ke pekerjaan lain.|发票由约10分钟缩短至约5秒；节省的工时可用于其他工作。'],
+['Alur Kerja Baru yang Lebih Efisien|更高效的新工作流程','Dari input DO, validasi tarif, persetujuan, hingga invoice dan tindak lanjut pembayaran kini berjalan dalam satu sistem.|从运单录入、价格验证、审批到发票及付款跟进，现在在同一系统内完成。'],
+['Peningkatan Sistem yang Meningkatkan Produktivitas|提升生产力的系统升级','Pekerjaan berulang seperti pembuatan invoice menjadi otomatis, dari ±10 menit menjadi ±5 detik per invoice.|发票制作等重复性工作实现自动化，每张由约10分钟缩短至约5秒。'],
+['Memberikan Nilai Tambah|创造附加价值','Selain lebih cepat, data menjadi lebih terjaga dan transparan melalui persetujuan dan hak akses per role.|除了更快速，数据通过审批和按角色授权更安全、更透明。'],
+['Solusi Kreatif untuk Masalah yang Sudah Ada|针对现有问题的创新方案','Masalah pembuatan invoice manual yang memakan waktu diselesaikan dengan aplikasi yang dikembangkan sendiri.|针对手工制作发票耗时的问题，以自主开发的应用加以解决。']];
+const cardX=a=>a.map(c=>`<div class="card hv"><h3 class="gold">${X(c[0])}</h3><p style="font-size:13.5px">${X(c[1])}</p></div>`).join('');
+function spot(){$$('[data-ex]').forEach(e=>e.innerHTML=`<div style="display:flex;gap:10px;flex-wrap:wrap"><button class="go" onclick="exportSim('${e.dataset.ex}','x')">${T('ex_x')}</button><button class="go" style="background:linear-gradient(135deg,var(--g),#06784A);color:#fff" onclick="exportSim('${e.dataset.ex}','p')">${T('ex_p')}</button></div>`);
+$('#ctc').innerHTML=cardX(CT);$('#crc').innerHTML=cardX(CR);
+ $('#imc').innerHTML=[1,0,2].map(i=>appCard(i,1)).join('');$$('[data-u]').forEach(e=>e.innerHTML=appCard(+e.dataset.u,0));
+ calc();if(!rd)$('#rr').textContent=''}
+let tst;
+function exportSim(a,t){const bx=$('#ts'),m=$('#tsm'),b=$('#tsb'),f=({ton:'Laporan_Tonase_Revenue',scm:'Laporan_SCM'})[a]+(t=='x'?'.xlsx':'.pptx');clearTimeout(tst);
+ m.textContent='⏳ '+T('ex_prep')+': '+f;b.style.transition='none';b.style.width='0';bx.classList.remove('d');bx.classList.add('s');void b.offsetWidth;b.style.transition='width 1.3s ease';b.style.width='100%';
+ tst=setTimeout(()=>{m.textContent='✔ '+T('ex_ok')+': '+f;bx.classList.add('d');tst=setTimeout(()=>bx.classList.remove('s'),2800)},1400)}
+let rm=1,rt,rd=0;
+function setMode(m){rm=m;$$('.mb').forEach(b=>b.classList.toggle('on',b.dataset.m==m));race(1)}
+function race(reset){clearInterval(rt);rd=0;const A=$('#la'),M=$('#lm');A.style.width=M.style.width='0';$('#clk').textContent='00:00';$('#rr').textContent='';if(reset)return;
+ const D=5200,t0=vnow();rt=setInterval(()=>{const k=Math.min(1,(vnow()-t0)/D),s=k*600,a=rm==1?Math.min(1,s/5):s/600,m=rm==1?s/600:s/300000;
+  A.style.width=a*100+'%';M.style.width=Math.max(m*100,k>0?.8:0)+'%';$('#clk').textContent=String(Math.floor(s/60)).padStart(2,'0')+':'+String(Math.floor(s%60)).padStart(2,'0');
+  if(k>=1){clearInterval(rt);rd=1;$('#rr').textContent=T(rm==1?'res1':'res2')}},40)}
+function calc(){const n=Math.max(0,+$('#ci').value||0),man=n*10/60,app=n*5/3600,sv=man-app,f=x=>x.toLocaleString(lang=='id'?'id-ID':'zh-CN',{maximumFractionDigits:1});
+ $('#o1').textContent=f(man)+' '+T('u_jam');$('#o2').textContent=f(app*60)+' '+T('u_menit');$('#o3').textContent=f(sv)+' '+T('u_jam');$('#o4').textContent=f(sv/8)+' '+T('u_hari')}
+function setLang(l){lang=l;$('#lang').classList.remove('o');render()}
+function go(i){if(i<0||i>=N)return;cur=i;$$('.slide').forEach((s,j)=>s.classList.toggle('a',j==i));$$('#nav button').forEach((b,j)=>b.classList.toggle('on',j==i));$('#bar').style.width=((i+1)/N*100)+'%';$('#ct').textContent=(i+1)+' / '+N+' • '+T(NAMES[i]);$$('.slide')[i].scrollTop=0}
+function fs(){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen()}
+document.addEventListener('keydown',e=>{if(e.key=='ArrowRight')go(cur+1);if(e.key=='ArrowLeft')go(cur-1);if(e.key=='Escape'){$('#lb').classList.remove('o');zvClose()}});
+document.addEventListener('click',e=>{if(!e.target.closest('#lang'))$('#lang').classList.remove('o')});
+// watermark diagonal berulang
+const svg="<svg xmlns='http://www.w3.org/2000/svg' width='360' height='140'><text x='14' y='80' font-family='Arial' font-size='21' font-weight='700' fill='rgba(255,255,255,.11)' stroke='rgba(0,60,35,.12)' stroke-width='.7'>Mukhamat Muhtar · 801524</text></svg>";
+$('#wm').style.backgroundImage='url("data:image/svg+xml,'+encodeURIComponent(svg)+'")';
+$$('.ph').forEach(e=>{e.onmousemove=ev=>{const r=e.getBoundingClientRect(),x=(ev.clientX-r.left)/r.width,y=(ev.clientY-r.top)/r.height;e.style.setProperty('--mx',x*100+'%');e.style.setProperty('--my',y*100+'%');e.style.transform='perspective(900px) rotateY('+((x-.5)*18)+'deg) rotateX('+((.5-y)*18)+'deg) scale(1.06)'};e.onmouseleave=()=>{e.style.transform=''}});
+/* ===== SANG SUTRADARA: tayang otomatis sinematik ===== */
+let autoPlayTimer=null,actTimers=[],showOn=false,scrollRAF=0,mvT=0;
+let autoOn=true;
+const goRaw=go;go=function(i){if(i<0||i>=N)return;if(showOn&&autoOn)jumpScene(i);else goRaw(i)};
+/* TEMPO: 1 = normal. 0.8 = lebih cepat, 1.2 = lebih lambat (memengaruhi waktu tahan & pergantian gambar). */
+const TEMPO=.85;
+const tbH=()=>{const t=$('.top');return t?t.offsetHeight:56};
+/* Langkah adegan: ['w',ms] tahan | ['scroll',sel,ms] gulir (sel di bagian atas) lalu tunggu | ['reveal',sel,ms] gulir secukupnya sampai elemen terlihat penuh
+   ['sweep'] gulir sampai dasar halaman (otomatis, sesuai tinggi layar) | ['galbg',id,ms] putar semua gambar galeri di tempat sambil lanjut | ['do',fn] aksi | ['join'] tunggu langkah latar */
+const FLSTEPS=FL.map((f,i)=>[['do',()=>{wi=i;render()}],['w',1700]]).reduce((a,b)=>a.concat(b),[]);
+const SCENE_SCRIPT=[
+ {s:0,ops:[['w',3200],['sweep'],['w',2600]]},
+ {s:1,ops:[['w',3400],['sweep'],['w',4400]]},
+ {s:2,ops:[['galbg','fin',3000],['w',3600],['reveal','.benefit',1700],['w',3600],['join'],['w',500]]},
+ {s:3,ops:[['galbg','ton',2800],['w',3000],['reveal','.exb',1500],['do',()=>exportSim('ton','x')],['w',3600],['reveal','.benefit',1600],['w',3400],['join'],['w',500]]},
+ {s:4,ops:[['galbg','scm',2600,1],['w',2400],['scroll','#grp',1800],['w',4800],['reveal','#grp',2000],['w',3000],['join'],['w',400],
+   ['scroll','h3[data-i="rt"]',1800],['w',800],['do',()=>pickRole(0)],['w',1500],['do',()=>pickRole(1)],['w',1500],['do',()=>pickRole(2)],['w',1500],['do',()=>pickRole(3)],['w',1500],
+   ['scroll','.paper',1800],['w',3000],['reveal','.paper',2400],['w',2200],['scroll','h3[data-i="wf"]',1800]].concat(FLSTEPS).concat([['reveal','.benefit',1800],['w',3600]])},
+ {s:5,ops:[['w',3800],['scroll','h3[data-i="rt_"]',1200],['w',500],['do',()=>{setMode(1);race()}],['w',6000],['do',()=>{setMode(500);race()}],['w',6600],['scroll','[data-i="spn"]',1200],['w',2400]]},
+ {s:6,ops:[['w',500],['do',calcDemo],['w',4200],['scroll','h3[data-i="impl"]',1800],['w',3400],['scroll','h3[data-i="crit"]',1800],['w',4200],['reveal','#crc',1800],['w',2400]]},
+ {s:7,ops:[['w',4800],['scroll','#eq',1500],['w',5000]]},
+ {s:8,ops:[['w',3500],['sweep'],['w',5000]]},
+ {s:-1,outro:1,ops:[['w',16000]]}];
+function compileScene(sc){const acts=[];let t=0,bg=0;const W=ms=>ms*TEMPO;
+ sc.ops.forEach(o=>{const c=o[0];
+  if(c=='w')t+=W(o[1]);
+  else if(c=='scroll'||c=='reveal'){const sel=o[1],ms=o[2];acts.push([t,()=>c=='scroll'?scrollEl(sel,ms):revealEl(sel,ms)]);t+=ms}
+  else if(c=='sweep'&&sc.s>=0){const sl=$$('.slide')[sc.s],ov=sl.scrollHeight-sl.clientHeight;if(ov>24){const ms=Math.min(8000,Math.max(2200,ov*9));acts.push([t,()=>sweepBottom(ms)]);t+=ms+W(900)}}
+  else if(c=='galbg'){const id=o[1],per=W(o[2]),n=G[id].length,sl=$$('.slide')[sc.s],seq=!o[3]&&(sl.scrollHeight-sl.clientHeight>24||innerWidth<1000);
+   for(let j=0;j<n;j++)acts.push([t+per*j,()=>showImg(id,j,per)]);if(seq)t+=per*n;else bg=Math.max(bg,t+per*n)}
+  else if(c=='do')acts.push([t,o[1]]);
+  else if(c=='join')t=Math.max(t,bg)});
+ sc.acts=acts;sc.d=Math.max(t,bg);return sc}
+function scrollTo2(top,ms){const sl=$$('.slide')[cur];cancelAnimationFrame(scrollRAF);const from=sl.scrollTop,t0=vnow(),max=sl.scrollHeight-sl.clientHeight,to=Math.max(0,Math.min(max,top));
+ const st=n=>{if(!showOn)return;const k=Math.min(1,(vnow()-t0)/ms);sl.scrollTop=from+(to-from)*ease(k);if(k<1)scrollRAF=requestAnimationFrame(st)};scrollRAF=requestAnimationFrame(st)}
+function revealEl(sel,ms){const sl=$$('.slide')[cur],t=sl.querySelector(sel);if(!t)return;const need=t.getBoundingClientRect().bottom-(sl.getBoundingClientRect().bottom-26);if(need>2)scrollTo2(sl.scrollTop+need,ms)}
+function sweepBottom(ms){const sl=$$('.slide')[cur];scrollTo2(sl.scrollHeight,ms)}
+function showImg(id,j,per){gi[id]=j;const el=$('[data-g="'+id+'"]');if(el)gal(el);
+ if(j==0&&innerWidth<1000&&el)scrollEl('[data-g="'+id+'"]',1200)}
+const _gal=gal;gal=function(el){_gal(el);const th=el.querySelector&&el.querySelector('.th'),b=th&&th.querySelector('.on');if(th&&b){const r=b.getBoundingClientRect(),q=th.getBoundingClientRect();th.scrollLeft=Math.max(0,r.left-q.left+th.scrollLeft-(th.clientWidth-r.width)/2)}};
+function zoomFirst(id){const v=document.querySelector('[data-g="'+id+'"] .view');if(v)v.click()}
+function closeZoom(){$('#lb').classList.remove('o')}
+function ease(k){return k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2}
+function autoScroll(d){cancelAnimationFrame(scrollRAF);const el=$$('.slide')[cur],max=el.scrollHeight-el.clientHeight;if(max<12)return;const dl=1200,du=Math.max(1000,d*.82-dl),t0=vnow();
+ const st=n=>{if(!showOn)return;const k=Math.min(1,Math.max(0,(vnow()-t0-dl)/du));el.scrollTop=max*ease(k);if(k<1)scrollRAF=requestAnimationFrame(st)};scrollRAF=requestAnimationFrame(st)}
+function scrollEl(sel,ms){const sl=$$('.slide')[cur],t=sl.querySelector(sel);if(!t)return;cancelAnimationFrame(scrollRAF);const from=sl.scrollTop,to=Math.max(0,t.getBoundingClientRect().top-sl.getBoundingClientRect().top+sl.scrollTop-(tbH()+18)),t0=vnow();
+ const st=n=>{if(!showOn)return;const k=Math.min(1,(vnow()-t0)/ms);sl.scrollTop=from+(to-from)*ease(k);if(k<1)scrollRAF=requestAnimationFrame(st)};scrollRAF=requestAnimationFrame(st)}
+function calcDemo(){const i=$('#ci'),t0=vnow();const st=n=>{if(!showOn)return;const k=Math.min(1,(vnow()-t0)/2400);i.value=Math.round(500*(1-Math.pow(1-k,3)));calc();if(k<1)requestAnimationFrame(st)};requestAnimationFrame(st)}
+function makeDust(id){const d=$('#'+(id||'dust'));if(d.childElementCount)return;for(let i=0;i<40;i++){const e=document.createElement('i'),z=2+Math.random()*3.5;e.style.cssText='left:'+Math.random()*100+'%;width:'+z+'px;height:'+z+'px;--dx:'+(Math.random()*80-40)+'px;animation-duration:'+(6+Math.random()*8)+'s;animation-delay:-'+Math.random()*10+'s';d.appendChild(e)}}
+function runScene(k,startAt){if(!showOn)return;clearInterval(tick);cancelAnimationFrame(scrollRAF);clearInterval(rt);closeZoom();$('#ts').classList.remove('s');
+ const sc=SCENE_SCRIPT[k];if(!sc){finishShow();return}
+ sceneK=k;firedActs=[];
+ if(sc.outro){compileScene(sc);sceneT0=vnow();showOutro()}
+ else{if(startAt==null){goRaw(sc.s);lowerThird(sc.s)}compileScene(sc);sceneT0=vnow()-(startAt||0);if(startAt)sc.acts.forEach((a,i)=>{if(a[0]<startAt)firedActs[i]=1})}
+ tick=setInterval(dirTick,50)}
+function dirTick(){if(!showOn||paused)return;const sc=SCENE_SCRIPT[sceneK],t=vnow()-sceneT0;
+ sc.acts.forEach((a,i)=>{if(!firedActs[i]&&t>=a[0]){firedActs[i]=1;a[1]()}});
+ $('#bar').style.width=Math.min(100,(sceneK+Math.min(1,t/sc.d))/SCENE_SCRIPT.length*100)+'%';
+ if(t>=sc.d){clearInterval(tick);runScene(sceneK+1)}}
+/* ===== navigasi manual fleksibel (musik & autoplay tidak terputus) ===== */
+function jumpScene(i){if(!showOn)return;runScene(i)}
+function lowerThird(i){const e=$('#lt');if(!e)return;if(i<2||i>7){e.className='';return}
+ const n=i>=2&&i<=4?'0'+(i-1):'SCM';e.querySelector('.lt-n').textContent=n+' · J&T CARGO';
+ e.querySelector('.lt-t').textContent=T(NAMES[i]);e.querySelector('.lt-s').textContent=i>=2&&i<=4?T('s'+(i-1)):'';
+ e.className='';void e.offsetWidth;e.className='s'}
+let mtT=0,manK=-1,manT=0;function mToast(m){const e=$('#mtoast');e.textContent=m;e.classList.add('s');clearTimeout(mtT);mtT=setTimeout(()=>e.classList.remove('s'),4200)}
+function updManBtn(){const b=$('#manb');if(!b)return;b.textContent=T(autoOn?'manb1':'manb2');b.classList.toggle('res',!autoOn)}
+function setManual(on,withToast){if(!showOn||on===!autoOn)return;autoOn=!on;document.body.classList.toggle('man',on);
+ if(on){manK=sceneK;manT=vnow()-sceneT0;clearInterval(tick);cancelAnimationFrame(scrollRAF);clearInterval(rt);$('#lt').className='';if(withToast)mToast(T('mtoast'))}
+ else{closeZoom();$('#mtoast').classList.remove('s');
+  /* lanjut dari titik terakhir bila masih di slide yang sama, kalau pindah slide mulai dari awal slide itu */
+  const sc=SCENE_SCRIPT[manK];if(sc&&sc.s===cur)runScene(manK,manT);else runScene(Math.min(cur,SCENE_SCRIPT.length-2))}
+ updManBtn()}
+function toggleManual(){setManual(autoOn)}
+['wheel','touchstart','pointerdown'].forEach(ev=>document.addEventListener(ev,e=>{if(!showOn||!autoOn||!e.isTrusted||!e.target.closest)return;
+ if(e.target.closest('#dock,.top,.bot,#intro,#outro,#pz,#ts'))return;if(!e.target.closest('.slide,#lb'))return;setManual(true,true)},{capture:true,passive:true}));
+function startShow(){endShow(true);showOn=true;document.body.classList.add('show');goRaw(0);runScene(0)}
+function showIntro(fast){makeDust();const ov=$('#intro');ov.className='';void ov.offsetWidth;ov.className='on'+(fast===true?' fast':'')}
+function beginFromIntro(){const ov=$('#intro');if(!ov.classList.contains('on')||ov.classList.contains('out'))return;ov.classList.add('out');musicStart();autoPlayTimer=setTimeout(startShow,750)}
+function endShow(silent){clearTimeout(autoPlayTimer);actTimers.forEach(clearTimeout);actTimers=[];cancelAnimationFrame(scrollRAF);clearInterval(tick);resetPause();
+ const was=showOn;showOn=false;document.body.classList.remove('show','mv','man');autoOn=true;updManBtn();$('#intro').className='';$('#outro').className='';closeZoom();
+ if(!silent&&was){clearInterval(rt);if(rsel!=-1){rsel=-1;render()}goRaw(0)}}
+document.addEventListener('mousemove',()=>{if(!showOn)return;document.body.classList.add('mv');clearTimeout(mvT);mvT=setTimeout(()=>document.body.classList.remove('mv'),2200)});
+$$('#intro img[data-src],#outro img[data-src]').forEach(i=>{i.referrerPolicy='no-referrer';i.src=i.dataset.src});
+/* ===== COVER BELAKANG, STOP DENGAN SPASI ===== */
+function stopShow(silent){endShow(silent);musicStop(1.1);if(!silent)showIntro(true)}
+function finishShow(){clearTimeout(autoPlayTimer);actTimers.forEach(clearTimeout);actTimers=[];cancelAnimationFrame(scrollRAF);clearInterval(tick);resetPause();showOn=false;document.body.classList.remove('show','mv','man');autoOn=true;updManBtn()}
+function showOutro(){makeDust('dust2');const o=$('#outro');o.className='';void o.offsetWidth;o.className='on';musicFinale()}
+function replayShow(){const o=$('#outro');o.classList.add('out');setTimeout(()=>{o.className='';goRaw(0);showIntro(true)},700)}
+document.addEventListener('keydown',e=>{if(e.key===' '&&showOn){e.preventDefault();if(e.repeat)return;if(document.activeElement&&document.activeElement.blur)document.activeElement.blur();togglePause()}});
+let paused=false,pausedAt=0,pausedTotal=0,sceneK=-1,sceneT0=0,firedActs=[],tick=null;
+function vnow(){return (paused?pausedAt:performance.now())-pausedTotal}
+function pauseShow(){if(!showOn||paused)return;paused=true;pausedAt=performance.now();document.body.classList.add('paused');$('#pausb').textContent='▶';try{if(AC&&AC.state==='running')AC.suspend();if(mAudio)mAudio.pause()}catch(e){}}
+function resumeShow(){if(!paused)return;pausedTotal+=performance.now()-pausedAt;paused=false;document.body.classList.remove('paused');$('#pausb').textContent='⏸';try{if(AC)AC.resume();if(mAudio&&musicOn)mAudio.play().catch(()=>{})}catch(e){}}
+function togglePause(){paused?resumeShow():pauseShow()}
+function resetPause(){if(paused){pausedTotal+=performance.now()-pausedAt}paused=false;document.body.classList.remove('paused');$('#pausb').textContent='⏸';try{if(AC&&AC.state==='suspended')AC.resume()}catch(e){}}
+/* ===== ZOOM GAMBAR KRITERIA (roda mouse, seret, klik dua kali) ===== */
+const ZB='https://drive.google.com/thumbnail?id=1JYulbzyeqM5d86aJSzRVPra5TJnUTqaE&sz=w3000',ZS='https://drive.google.com/thumbnail?id=1JYulbzyeqM5d86aJSzRVPra5TJnUTqaE&sz=w1600';let zs=1,zx=0,zy=0,zfit=1,zdrag=null;
+function zvApply(){$('#zvi').style.transform='translate('+zx+'px,'+zy+'px) scale('+zs+')'}
+function zvFit(){const i=$('#zvi'),st=$('.zv-st');if(!i.naturalWidth)return;zfit=Math.min(st.clientWidth/i.naturalWidth,st.clientHeight/i.naturalHeight);zs=zfit;zx=(st.clientWidth-i.naturalWidth*zs)/2;zy=(st.clientHeight-i.naturalHeight*zs)/2;zvApply()}
+function zvOpen(){const i=$('#zvi');$('#zv').classList.add('on');i.referrerPolicy='no-referrer';i.onload=zvFit;i.onerror=()=>{if(i.src!==ZS)i.src=ZS};if(!i.src)i.src=ZB;else zvFit()}
+function zvClose(){$('#zv').classList.remove('on')}
+function zvZoom(f,cx,cy){const st=$('.zv-st');if(cx==null){cx=st.clientWidth/2;cy=st.clientHeight/2}const ns=Math.min(zfit*14,Math.max(zfit*.8,zs*f));zx=cx-(cx-zx)*(ns/zs);zy=cy-(cy-zy)*(ns/zs);zs=ns;zvApply()}
+(function(){const st=$('.zv-st');
+ st.addEventListener('wheel',e=>{e.preventDefault();const r=st.getBoundingClientRect();zvZoom(e.deltaY<0?1.2:1/1.2,e.clientX-r.left,e.clientY-r.top)},{passive:false});
+ st.addEventListener('pointerdown',e=>{zdrag={x:e.clientX-zx,y:e.clientY-zy};st.setPointerCapture(e.pointerId)});
+ st.addEventListener('pointermove',e=>{if(!zdrag)return;zx=e.clientX-zdrag.x;zy=e.clientY-zdrag.y;zvApply()});
+ st.addEventListener('pointerup',()=>{zdrag=null});
+ st.addEventListener('dblclick',e=>{const r=st.getBoundingClientRect();if(zs>zfit*1.4)zvFit();else zvZoom(3.4,e.clientX-r.left,e.clientY-r.top)});
+ document.addEventListener('keydown',e=>{if(!$('#zv').classList.contains('on'))return;if(e.key=='+'||e.key=='=')zvZoom(1.25);if(e.key=='-')zvZoom(1/1.25)})})();
+/* ===== BACKSOUND SINEMATIK (sintesis Web Audio, tanpa file) =====
+   Opsional: isi BACKSOUND_URL dengan tautan file mp3 milikmu. Kosong = musik orkestra buatan otomatis. */
+const BACKSOUND_URL='';
+let AC=null,MG=null,DRY=null,WET=null,NB=null,mTimer=null,mT0=0,mNext=0,mStep=0,mFin=false,musicOn=true,mAudio=null;
+const CHORDS=[{b:35,p:[59,62,66,71]},{b:31,p:[55,59,62,67]},{b:38,p:[57,62,66,69]},{b:33,p:[57,61,64,69]}];
+const mf=m=>440*Math.pow(2,(m-69)/12);
+function mInit(){if(AC)return;AC=new(window.AudioContext||window.webkitAudioContext)();const cp=AC.createDynamicsCompressor();cp.connect(AC.destination);MG=AC.createGain();MG.gain.value=0;MG.connect(cp);DRY=AC.createGain();DRY.connect(MG);
+ const rv=AC.createConvolver(),n=AC.sampleRate*3.2,b=AC.createBuffer(2,n,AC.sampleRate);for(let c=0;c<2;c++){const d=b.getChannelData(c);for(let i=0;i<n;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/n,2.8)}
+ rv.buffer=b;WET=AC.createGain();WET.gain.value=.55;WET.connect(rv);rv.connect(MG);
+ NB=AC.createBuffer(1,AC.sampleRate*3,AC.sampleRate);const nd=NB.getChannelData(0);for(let i=0;i<nd.length;i++)nd[i]=Math.random()*2-1}
+function env(g,t,v,a,d){g.gain.setValueAtTime(.0001,t);g.gain.linearRampToValueAtTime(v,t+a);g.gain.exponentialRampToValueAtTime(.0001,t+d)}
+function osc(t,f,type,v,a,d,wet,det){const o=AC.createOscillator(),g=AC.createGain();o.type=type;o.frequency.value=f;if(det)o.detune.value=det;env(g,t,v,a,d);o.connect(g);g.connect(DRY);if(wet)g.connect(WET);o.start(t);o.stop(t+d+.1)}
+function noise(t,d,f0,f1,v,a,wet){const s=AC.createBufferSource();s.buffer=NB;const f=AC.createBiquadFilter();f.type='bandpass';f.Q.value=.8;f.frequency.setValueAtTime(f0,t);f.frequency.exponentialRampToValueAtTime(f1,t+d);const g=AC.createGain();env(g,t,v,a,d);s.connect(f);f.connect(g);g.connect(DRY);if(wet)g.connect(WET);s.start(t);s.stop(t+d+.1)}
+function kick(t,v){const o=AC.createOscillator(),g=AC.createGain();o.frequency.setValueAtTime(110,t);o.frequency.exponentialRampToValueAtTime(38,t+.28);env(g,t,v,.005,.5);o.connect(g);g.connect(DRY);o.start(t);o.stop(t+.6)}
+function pad(t,ch,d,e){const f=AC.createBiquadFilter();f.type='lowpass';f.frequency.value=600+Math.min(e,70)*16;f.Q.value=.7;const g=AC.createGain();env(g,t,.075,2.2,d+1.5);f.connect(g);g.connect(DRY);g.connect(WET);
+ ch.p.forEach(m=>[-7,7].forEach(dt=>{const o=AC.createOscillator();o.type='sawtooth';o.frequency.value=mf(m);o.detune.value=dt;o.connect(f);o.start(t);o.stop(t+d+1.7)}))}
+function mPlay(t,k){if(mFin)return;const e=t-mT0,ch=CHORDS[Math.floor(k/16)%4];
+ if(k%16==0){pad(t,ch,6.2,e);osc(t,mf(ch.b),'sine',.34,.08,6.4,0);osc(t,mf(ch.b+12),'triangle',.07,.2,5,.3)}
+ if(e>6){const i=[0,1,2,3,2,1,3,2][k%8];if(k%2==0||e>34)osc(t,mf(ch.p[i]+12+(e>62?12:0)),'sine',.1,.004,1.9,1)}
+ if(e>22&&k%8==0)kick(t,.5);if(e>22&&k%8==4)kick(t,.28);if(e>40&&k%2==1)noise(t,.09,6500,7000,.05,.005,0)}
+function mTick(){if(!AC)return;const now=AC.currentTime;while(mNext<now+.7){mPlay(mNext,mStep);mNext+=.395;mStep++}}
+/* ===== musik intro: tumbuh bersama animasi pembuka (kilatan logo, judul emas, bingkai, tombol) ===== */
+function introMusic(){try{if(BACKSOUND_URL){mAudio=mAudio||new Audio(BACKSOUND_URL);mAudio.loop=true;mAudio.volume=musicOn?.7:0;mAudio.currentTime=0;mAudio.play().catch(()=>{});return}
+ mInit();AC.resume();const t=AC.currentTime;MG.gain.cancelScheduledValues(t);MG.gain.setValueAtTime(0,t);MG.gain.linearRampToValueAtTime(musicOn?.55:0,t+1.2);
+ mT0=t+.15;mNext=mT0;mStep=0;mFin=false;clearInterval(mTimer);mTimer=setInterval(mTick,150);introCues(mT0)}catch(e){}}
+function introCues(t0){
+ noise(t0+.05,2.35,220,7500,.22,2.1,1);osc(t0+.05,mf(23),'sine',.3,1.7,2.7,0);
+ [95,98,102,107].forEach((m,i)=>osc(t0+.3+i*.07,mf(m),'sine',.075,.003,2.6,1));noise(t0+.28,.75,9500,2500,.1,.01,1);
+ const t=t0+2.35;kick(t,1);osc(t,mf(35),'sine',.45,.02,3.2,0);noise(t,3,6500,400,.28,.004,1);
+ [59,66,71,74,78].forEach(m=>{osc(t,mf(m),'triangle',.05,.9,6,.7,-5);osc(t,mf(m),'triangle',.05,.9,6,.7,5)});
+ for(let i=0;i<14;i++){const s=2.9+i*.62+(i%3)*.07;osc(t0+s,mf([83,86,88,90,93,95][i%6]),'sine',.045,.003,1.8,1)}
+ [71,74,78,83].forEach((m,i)=>osc(t0+7.8+i*.1,mf(m),'sine',.06,.01,3,1))}
+function musicStart(){try{if(BACKSOUND_URL){mAudio=mAudio||new Audio(BACKSOUND_URL);mAudio.loop=true;mAudio.volume=musicOn?.7:0;mAudio.currentTime=0;mAudio.play().catch(()=>{});return}
+ mInit();AC.resume();const t=AC.currentTime;MG.gain.cancelScheduledValues(t);MG.gain.setValueAtTime(MG.gain.value,t);MG.gain.linearRampToValueAtTime(musicOn?.55:0,t+1.6);
+ mT0=t+.15;mNext=mT0;mStep=0;mFin=false;kick(mT0,.95);noise(mT0,2.2,400,80,.5,.01,1);clearInterval(mTimer);mTimer=setInterval(mTick,150)}catch(e){}}
+function musicStop(sec){try{sec=sec||1;if(mAudio)mAudio.pause();if(!AC)return;const t=AC.currentTime,tm=mTimer;MG.gain.cancelScheduledValues(t);MG.gain.setValueAtTime(MG.gain.value,t);MG.gain.linearRampToValueAtTime(0,t+sec);setTimeout(()=>clearInterval(tm),sec*1000)}catch(e){}}
+function musicFinale(){try{if(!AC||BACKSOUND_URL)return;mFin=true;const t=AC.currentTime+.1;noise(t,3,300,5000,.22,2.6,1);
+ [50,57,62,66,69,74].forEach(m=>{osc(t+2.8,mf(m),'triangle',.05,1.6,9,.6,-6);osc(t+2.8,mf(m),'triangle',.05,1.6,9,.6,6)});
+ osc(t+2.8,mf(38),'sine',.4,.1,10,0);kick(t+2.8,.9);[74,78,81,86,81,78,86,90].forEach((m,i)=>osc(t+3.2+i*.32,mf(m),'sine',.1,.004,2.2,1));
+ const v=musicOn?.55:0;MG.gain.cancelScheduledValues(t);MG.gain.setValueAtTime(v,t+8);MG.gain.linearRampToValueAtTime(0,t+14)}catch(e){}}
+function toggleSound(){musicOn=!musicOn;try{if(mAudio)mAudio.volume=musicOn?.7:0;if(AC){const t=AC.currentTime;MG.gain.cancelScheduledValues(t);MG.gain.setValueAtTime(MG.gain.value,t);MG.gain.linearRampToValueAtTime(musicOn?.55:0,t+.4)}}catch(e){}$$('#sndi,#sndb').forEach(b=>b.textContent=musicOn?'🔊':'🔇')}
+function setTb(){const t=$('.top');if(t)document.documentElement.style.setProperty('--tb',t.offsetHeight+'px')}
+setTb();addEventListener('resize',setTb);if(window.ResizeObserver)new ResizeObserver(setTb).observe($('.top'));if(document.fonts&&document.fonts.ready)document.fonts.ready.then(setTb);
+const _render=render;render=function(){_render();updManBtn();setTb()};
+render();go(0);
+(function(){let ok=false;const go2=()=>{showIntro();introMusic()},
+  run=()=>{if(ok)return;ok=true;try{mInit();AC.resume&&AC.resume()}catch(e){}
+   setTimeout(()=>{if(AC&&AC.state==='running'){go2();return}
+    const g=$('#gate');g.classList.add('on');const ev=['pointerdown','keydown','touchstart'];
+    const open=e=>{if(e&&e.isTrusted===false)return;ev.forEach(v=>removeEventListener(v,open,true));g.classList.remove('on');try{AC.resume()}catch(_){}go2()};
+    ev.forEach(v=>addEventListener(v,open,true))},350)},im=$('#intro .io-frame img');im.addEventListener('load',run);im.addEventListener('error',run);setTimeout(run,2500)})();
+document.addEventListener('keydown',e=>{if(e.key=='Enter')beginFromIntro()});
+</script></body></html>
